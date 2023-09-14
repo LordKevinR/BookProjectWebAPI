@@ -5,12 +5,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookProjectWebAPI.Services
 {
-    public class BookRepository : IBookRepository
+	public class BookRepository : IBookRepository
 	{
 		private readonly ApplicationDbContext context;
 
 		public BookRepository(ApplicationDbContext context)
-        {
+		{
 			this.context = context;
 		}
 
@@ -65,5 +65,5 @@ namespace BookProjectWebAPI.Services
 
 
 
-    }
+	}
 }

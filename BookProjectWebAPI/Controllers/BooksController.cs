@@ -11,7 +11,7 @@ namespace BookProjectWebAPI.Controllers
 		private readonly IBookService bookService;
 
 		public BooksController(IBookService bookService)
-        {
+		{
 			this.bookService = bookService;
 		}
 
@@ -27,7 +27,7 @@ namespace BookProjectWebAPI.Controllers
 		{
 			var book = await bookService.GetById(id);
 
-			if(book is null)
+			if (book is null)
 			{
 				return NotFound();
 			}
@@ -57,5 +57,5 @@ namespace BookProjectWebAPI.Controllers
 			await bookService.DeleteABook(id);
 			return NoContent();
 		}
-    }
+	}
 }
